@@ -10,7 +10,12 @@ module.exports = (sequelize, DataTypes) => {
       event_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
+        references: {
+            model: 'Events', 
+            key: 'id',
+          },
       },
+      
       start_date: {
         type: DataTypes.DATE,
       },
@@ -22,7 +27,12 @@ module.exports = (sequelize, DataTypes) => {
       },
       session_id: {
         type: DataTypes.INTEGER,
+        references:{
+            model:'sessions',
+            key:'id'
+          },
       },
+     
       remarks: {
         type: DataTypes.STRING,
       },

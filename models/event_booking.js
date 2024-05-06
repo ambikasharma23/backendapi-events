@@ -1,4 +1,3 @@
-// booking.js
 
 module.exports = (sequelize, DataTypes) => {
     const event_booking = sequelize.define('event_booking', {
@@ -10,6 +9,10 @@ module.exports = (sequelize, DataTypes) => {
       customer_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
+        refrences:{
+                model:'customers',
+                key:'id'
+        },
       },
       name: {
         type: DataTypes.STRING,
@@ -22,6 +25,10 @@ module.exports = (sequelize, DataTypes) => {
       ticket_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
+        refrences:{
+                model:'tickets',
+                key:'id'
+        },
       },
       status: {
         type: DataTypes.ENUM('completed', 'confirmed', 'cancel'),

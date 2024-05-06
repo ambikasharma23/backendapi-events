@@ -8,6 +8,10 @@ module.exports = (sequelize, DataTypes) => {
       restaurant_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
+        refrences:{
+            model: 'restaurants',
+            key: 'id'
+        }
       },
       event_name: {
         type: DataTypes.STRING,
@@ -18,9 +22,17 @@ module.exports = (sequelize, DataTypes) => {
       },
       city_id: {
         type: DataTypes.INTEGER,
+        refrences:{
+            model:'city',
+            key:'id'
+        },
       },
       region_id: {
         type: DataTypes.INTEGER,
+        refrences:{
+            model:'region',
+            key:'id'
+        },
       },
       event_description: {
         type: DataTypes.TEXT,
@@ -34,6 +46,10 @@ module.exports = (sequelize, DataTypes) => {
       },
       category_id: {
         type: DataTypes.INTEGER,
+        refrences:{
+            model:'event_category',
+            key:'id'
+        }
       },
       start_date: {
         type: DataTypes.DATE,

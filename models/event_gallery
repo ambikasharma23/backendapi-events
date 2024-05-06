@@ -10,6 +10,10 @@ module.exports = (sequelize, DataTypes) => {
     event_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
+      references: {
+        model: 'Events', 
+        key: 'id',
+      },
     },
     path: {
       type: DataTypes.STRING,
