@@ -20,8 +20,8 @@ module.exports = {
         tags: 'music',
         created_by: 'Ambika',
         updated_by: 'Ambika',
-        createdAt: new Date(),
-        updatedAt: new Date()
+        created_at: new Date(),
+        updated_at: new Date()
       }
     ];
 
