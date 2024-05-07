@@ -1,5 +1,5 @@
 module.exports=(sequelize, DataTypes)=>{
-    const event_Category = sequelize.define("event_Category",{
+    const Event_Category = sequelize.define("Event_Category",{
         id:{
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -34,5 +34,5 @@ module.exports=(sequelize, DataTypes)=>{
           },
 
     });
-    return event_Category;
+    return Event_Category;
 }

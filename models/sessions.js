@@ -1,5 +1,5 @@
 module.exports =(sequelize, DataTypes)=>{
-    const session =sequelize.define("session", {
+    const Session =sequelize.define("Session", {
         id:{
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -50,5 +50,5 @@ module.exports =(sequelize, DataTypes)=>{
           },
         
     });
-    return session;
+    return Session;
 }
