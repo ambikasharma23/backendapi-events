@@ -1,5 +1,5 @@
 module.exports =(sequelize, DataTypes)=>{
-    const Session =sequelize.define("Session", {
+    const session =sequelize.define("session", {
         id:{
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -7,7 +7,7 @@ module.exports =(sequelize, DataTypes)=>{
             allowNull : false
         },
         session:{
-            type: DataTypes.INTEGER.UNSIGNED,
+            type: DataTypes.STRING(20),
             allowNull: false,
         },
         event_id:{
@@ -40,13 +40,15 @@ module.exports =(sequelize, DataTypes)=>{
             type: DataTypes.DATE,
             allowNull: false,
             field: 'created_at',
+            defaultValue: DataTypes.NOW 
           },
           updatedAt: {
             type: DataTypes.DATE,
             allowNull: false,
             field: 'updated_at',
+            defaultValue: DataTypes.NOW 
           },
         
     });
-    return Session;
+    return session;
 }

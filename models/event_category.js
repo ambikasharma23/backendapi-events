@@ -1,5 +1,5 @@
 module.exports=(sequelize, DataTypes)=>{
-    const Event_Category = sequelize.define("Event_Category",{
+    const event_Category = sequelize.define("event_Category",{
         id:{
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -23,13 +23,16 @@ module.exports=(sequelize, DataTypes)=>{
             type: DataTypes.DATE,
             allowNull: false,
             field: 'created_at',
+            defaultValue: DataTypes.NOW 
           },
           updatedAt: {
             type: DataTypes.DATE,
             allowNull: false,
             field: 'updated_at',
+            defaultValue: DataTypes.NOW 
+
           },
 
     });
-    return Event_Category;
+    return event_Category;
 }
