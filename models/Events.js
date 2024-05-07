@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const Events = sequelize.define('Events', {
+    const events = sequelize.define('events', {
       id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -77,14 +77,16 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.DATE,
         allowNull: false,
         field: 'created_at',
+        defaultValue: DataTypes.NOW 
       },
       updatedAt: {
         type: DataTypes.DATE,
         allowNull: false,
         field: 'updated_at',
+        defaultValue: DataTypes.NOW 
       },
     });
   
-    return Events;
+    return events;
   };
   

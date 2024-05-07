@@ -11,11 +11,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-            model: 'Events', 
+            model: 'events', 
             key: 'id',
           },
       },
-      
       start_date: {
         type: DataTypes.DATE,
       },
@@ -40,16 +39,17 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.DATE,
         allowNull: false,
         field: 'created_at',
+        defaultValue: DataTypes.NOW 
+
       },
       updatedAt: {
         type: DataTypes.DATE,
         allowNull: false,
         field: 'updated_at',
+        defaultValue: DataTypes.NOW 
+
       },
     });
-  
-   
-  
     return event_exception;
   };
   

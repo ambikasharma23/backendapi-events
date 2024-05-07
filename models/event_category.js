@@ -15,20 +15,22 @@ module.exports=(sequelize, DataTypes)=>{
         },
         created_by: {
             type: DataTypes.STRING,
-          },
-          updated_by: {
-            type: DataTypes.STRING,
-          },
-          createdAt: {
-            type: DataTypes.DATE,
-            allowNull: false,
-            field: 'created_at',
-          },
-          updatedAt: {
-            type: DataTypes.DATE,
-            allowNull: false,
-            field: 'updated_at',
-          },
+        },
+        updated_by: {
+          type: DataTypes.STRING,
+        },
+        createdAt: {
+          type: DataTypes.DATE,
+          allowNull: false,
+          field: 'created_at',
+          defaultValue: DataTypes.NOW 
+        },
+        updatedAt: {
+          type: DataTypes.DATE,
+          allowNull: false,
+          field: 'updated_at',
+          defaultValue: DataTypes.NOW 
+        },
 
     });
     return event_category;
